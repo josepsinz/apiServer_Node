@@ -43,7 +43,6 @@ describe("BASIC TESTS", () => {
             .set({ 'Authorization': 'Bearer admintoken' })
             .send(product)
             .expect(function (res) {
-                console.log(res.body)
                 assert.deepStrictEqual(res.body.net_price, 1.21)
             })
             .end(done)
